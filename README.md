@@ -3,7 +3,8 @@ Equipo: Team Rocket
 Integrantes: 
 Andrés Juan Giraldo Vargas 393367
 
-Emmanuel
+Emmanuel Quintero 462240
+Karen Correa 484613
 
 ///////
 
