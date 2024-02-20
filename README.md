@@ -4,6 +4,7 @@ Integrantes:
 Andrés Juan Giraldo Vargas 393367
 
 Emmanuel Quintero 462240
+
 Karen Correa 484613
 
 ///////
