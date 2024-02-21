@@ -35,10 +35,69 @@ enum class Task1States{
 
 void task2(){
 
+        enum class Task2States{
+        INIT,
+        WAIT_FOR_TIMEOUT
+    };
+
+    static Task2States task2State = Task2States::INIT;
+    static uint32_t lastTime;
+    static constexpr uint32_t INTERVAL = 2000;
+
+    switch(task1State){
+        case Task1States::INIT:{
+            Serial.begin(115200);
+            lastTime = millis();
+            task2State = Task2States::WAIT_FOR_TIMEOUT;
+            break;
+        }
+
+        case Task1States::WAIT_FOR_TIMEOUT:{
+            uint32_t currentTime = millis();
+            if( (currentTime - lastTime) >= INTERVAL ){
+                lastTime = currentTime;
+                Serial.print("mensaje a 2Hz\n");
+            }
+            break;
+        }
+
+        default:{
+            break;
+        }
+    }
 }
 
 void task3(){
+ enum class Task3States{
+        INIT,
+        WAIT_FOR_TIMEOUT
+    };
 
+    static Task3States task3State = Task3States::INIT;
+    static uint32_t lastTime;
+    static constexpr uint32_t INTERVAL = 3000;
+
+    switch(task3State){
+        case Task2States::INIT:{
+            Serial.begin(115200);
+            lastTime = millis();
+            task3State = Task3States::WAIT_FOR_TIMEOUT;
+            break;
+        }
+
+        case Task3States::WAIT_FOR_TIMEOUT:{
+            uint32_t currentTime = millis();
+            if( (currentTime - lastTime) >= INTERVAL ){
+                lastTime = currentTime;
+                Serial.print("mensaje a 3Hz\n");
+            }
+            break;
+        }
+
+        default:{
+            break;
+        }
+    }
 }
 
 void setup()
