@@ -20,7 +20,7 @@ Karen Correa 484613
 
 7. La función Millis() sirve para que el sistema lleve una cuenta en milisegundos del tiempo que ha pasado desde que inició el programa. Esta función NO sirve sola para cambiar de estados, ya que el sistema no puede leer de millis el tiempo para activar un evento, por esto, creamos variables como "currenttiem", "previoustime", "lasttime"... Para llenarlas con valores de millis() y restarla entre ellas para crear intervalos que podran ser leidos por el código. En resumén millis() es una función, NO una variable, por lo que hay que crear variables para usar sus valores.
    
-8. El programa tiene 4 estados, el inicial, cuando pasa 1 segundo, cuando pasan 2 y cuando pasan 3.
+8. El programa tiene 2 estados, el inicial y cuando está esperando por los intervalos.
    Nuestro programa tiene 3 eventos, los cuales son al pasar cada segundo que nos dice el ejercicio (1,2 y 3)
    Las acciones en el programa son 3, son los mensajes que manda el sistema al detectar cada evento.
    
