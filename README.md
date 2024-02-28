@@ -24,3 +24,10 @@ Karen Correa 484613
    Nuestro programa tiene 3 eventos, los cuales son al pasar cada segundo que nos dice el ejercicio (1,2 y 3)
    Las acciones en el programa son 3, son los mensajes que manda el sistema al detectar cada evento.
    
+11. 
+
+   1. El evento que verifica si algo ha llegado al puerto serial es el "if (Serial.available() > 0)"
+   3. El número al lado de las letras en la tabla es la dirección de memoria donde se guarda el caracter
+   4. Éstos números son la dirección de memoria de los caracteres y son necesarios para el computador para poder leer, manipular y devolver mensajes escritos, ya que en el código a nivel de maquina se    maneja con direcciones y no con los caracteres como tal.
+   5. El programa tiene el 0a ya que esa es la manera que tiene el computador que ahí acaba el mensaje, y que el vacìo que està leyendo no es un caracter nulo ni un "espacio" pero que hasta ahì llega el mensaje y el espacio de memoria que debe guardar.
+
