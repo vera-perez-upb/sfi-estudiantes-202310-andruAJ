@@ -47,3 +47,14 @@ Después de probarlo, estaba en lo correcto.
    1. rxData se plantea como static porque queremos conservar su contenido y forma entre cada llamada a task1 y que no se mantenga reiniciando.
    2.dataCounter no se va a reiniciar a 0 cada vez que se entre al loop, ya que fue declarado en el task1 como una variable static, lo que la hace inmune a reinicios cada vez que entre a la función.
    3. la parte (pData[i] - 0x30) es necesaria porque de esta manera le decimos al sistema que transforme la variable de su forma en ASCII a su caracter correspondiente
+
+*16.*
+   1. Se verifica si el sistema detecta el serial port, de no hacerlo, no correrá ningún código (por el if que usamos siempre).
+   2. Se lee cualquier mensaje que se manda desde la serial, pero nunca lo usamos en ninguno de los ejercicios que hemos hecho.
+   3. La función va a devolver un "-1" indicandonos que no hay nada en el buffer de recepción.
+   4. Aunque en el buffer de recepción hayan varios datos, serial.read() sólo va a devolver un byte de datos.
+   5. Si se desea leer más datos, debemos de llamar a serial.read() múltiples veces para que este vaya leyendo los datos proporcionados, uno cada vez que pasa
+   6. El sistema puede recibir los datos mandados por el buffer, pero si no tienes el serial.read() ni nada similar que pueda interactuar con el buffer, el sistema no hará nada con esos datos proporcionados.
+
+*17.*
+   
