@@ -34,7 +34,7 @@ Karen Correa 484613
 *12.*
     Los punteros se definen y declaran como en el ejercicio con una línea similar a esta "uint32_t *pvar = &var;" donde se declara el tipo de variable (uint32_t) y se inicializa con la siguiente parte de la       línea, donde se le dice a que variable va a "apuntar"
 
-      Para obtener la dirección de una variable, utilizamos el operador de dirección "&" para decirle al sistema que nos la devuelva al puntero que definimos.
+   Para obtener la dirección de una variable, utilizamos el operador de dirección "&" para decirle al sistema que nos la devuelva al puntero que definimos.
       Con el * podemos leer el contenido de un puntero, usando otra variable e igualandola al puntero con el * antes del puntero para que se pueda leer (ejemplo: x = *pvar)
       Con el * también podemos cambiar el contenido de la variable a través del puntero, cambiando el valor casi como si fuese una variable (ejemplo: *pvar = 20)
 
