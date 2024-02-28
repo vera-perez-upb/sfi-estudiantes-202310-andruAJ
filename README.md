@@ -57,4 +57,8 @@ Después de probarlo, estaba en lo correcto.
    6. El sistema puede recibir los datos mandados por el buffer, pero si no tienes el serial.read() ni nada similar que pueda interactuar con el buffer, el sistema no hará nada con esos datos proporcionados.
 
 *17.*
+   Caso1 (datos en el buffer = 2): si tuvieramos dos datos en el buffer, el dataRx1 y dataRx2 los guardarían, mientras que el dataRx3 guardaría un -1, ya que no hay datos suficientes en el buffer
    
+   Caso2 (datos en el buffer> 2): si mandamos 3 o más datos, el código guardará en las variables los primeros 3 datos del buffer, por lo que si hubiera más de 3, el resto no se guardaría.
+
+   Caso3 (datos en el buffer <2): En este caso, no ocurriría el evento, el if no iniciaría con sus variables, por lo que no pasaría nada.
