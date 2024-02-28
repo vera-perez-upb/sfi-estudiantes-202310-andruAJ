@@ -42,3 +42,8 @@ Karen Correa 484613
    Hipotesis: En el task 1, en el estado WAIT_DATA, después de confirmar que ya le llegó información al serial port, se crea la variable "var" de tipo uint32 y se le da el valor 0, se procede a crear el puntero pvar y se le indica que guarde la dirección de la variable var y se manda este puntero a la función printVar. En esta función se imprime el valor de var con la variable value (específico de esta función), a través del puntero ya que se mando como un puntero. Luego se manda el puntero a la función changeVar y en esta función recibe un puntero que llama pdata, por lo que al pasar pvar sin el * igualmente se logra lo deseado ya que la función recibe un puntero y no una variable, por lo que es compatible. Después de que el valor de var fue cambiado a 10 con la dirección dada por pdata, nos vamos nuevamente a printVar, pero no mandamos el puntero pero la variable, que ya fue cambiada de 0 a 10.
 
 Después de probarlo, estaba en lo correcto.
+
+*15.*
+   1. rxData se plantea como static porque queremos conservar su contenido y forma entre cada llamada a task1 y que no se mantenga reiniciando.
+   2.dataCounter no se va a reiniciar a 0 cada vez que se entre al loop, ya que fue declarado en el task1 como una variable static, lo que la hace inmune a reinicios cada vez que entre a la función.
+   3. la parte (pData[i] - 0x30) es necesaria porque de esta manera le decimos al sistema que transforme la variable de su forma en ASCII a su caracter correspondiente
