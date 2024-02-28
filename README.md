@@ -31,3 +31,11 @@ Karen Correa 484613
    4. Éstos números son la dirección de memoria de los caracteres y son necesarios para el computador para poder leer, manipular y devolver mensajes escritos, ya que en el código a nivel de maquina se    maneja con direcciones y no con los caracteres como tal.
    5. El programa tiene el 0a ya que esa es la manera que tiene el computador que ahí acaba el mensaje, y que el vacìo que està leyendo no es un caracter nulo ni un "espacio" pero que hasta ahì llega el mensaje y el espacio de memoria que debe guardar.
 
+12.
+    Los punteros se definen y declaran como en el ejercicio con una línea similar a esta "uint32_t *pvar = &var;" donde se declara el tipo de variable (uint32_t) y se inicializa con la siguiente parte de la línea, donde se le dice a que variable va a "apuntar"
+
+   Para obtener la dirección de una variable, utilizamos el operador de dirección "&" para decirle al sistema que nos la devuelva al puntero que definimos.
+   Con el * podemos leer el contenido de un puntero, usando otra variable e igualandola al puntero con el * antes del puntero para que se pueda leer (ejemplo: x = *pvar)
+   Con el * también podemos cambiar el contenido de la variable a través del puntero, cambiando el valor casi como si fuese una variable (ejemplo: *pvar = 20)
+
+13. 
