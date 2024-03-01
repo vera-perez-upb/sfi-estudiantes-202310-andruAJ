@@ -6,7 +6,8 @@ void task1()
     };
 
     static Task1States task1State = Task1States::INIT;
-    static uint32_t value;
+    static uint32_t value = 0;
+    static uint32_t bufferRecepcion[32];
 
     switch (task1State)
     {
@@ -21,11 +22,8 @@ void task1()
     {
        if (Serial.available() > 0)
         {
-            value = value + Serial.available();
-            //static uint32_t bufferRecepcion[value];
-            Serial.print("Se han recibido");
-            Serial.print(value);
-            Serial.print('\n');
+            uint8_t datoRecibido = Serial.read(); 
+            bufferRecepcion[dataCounter++] = datoRecibido;
         }
         break;
     }
@@ -38,6 +36,7 @@ void task1()
 }
 
 void setup() {
+  
   task1();
 }
 
