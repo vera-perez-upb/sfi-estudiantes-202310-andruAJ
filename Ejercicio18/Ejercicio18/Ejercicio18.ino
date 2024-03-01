@@ -23,7 +23,7 @@ void task1()
        if (Serial.available() > 0)
         {
             uint8_t datoRecibido = Serial.read(); 
-            bufferRecepcion[dataCounter++] = datoRecibido;
+            bufferRecepcion[value++] = datoRecibido;
         }
         break;
     }
