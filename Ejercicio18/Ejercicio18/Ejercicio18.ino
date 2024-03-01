@@ -24,6 +24,7 @@ void task1()
         {
             uint8_t datoRecibido = Serial.read(); 
             bufferRecepcion[value++] = datoRecibido;
+            Serial.print(value);
         }
         break;
     }
@@ -41,4 +42,5 @@ void setup() {
 }
 
 void loop() {
+  task1();
 }
