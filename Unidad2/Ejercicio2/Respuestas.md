@@ -1,0 +1,3 @@
+Ejecuta la aplicación en Unity. Verás un número cambiar rápidamente en pantalla. Ahora presiona la tecla A (no olvides dar click en la pantalla Game). ¿Qué pasa? ¿Por qué crees que ocurra esto?
+
+Al presionar A, el número que aparece en la pantalla se detiene por un corto periodo de tiempo y luego continua. Mi hipótesis es que al mandarle el key, el buffer mantiene recibiendo este caracter y se recibe de vuelta el número de bytes que se han recibido, y ya que el buffer sigue recibiendo "A", no para de subir el número de bytes recibidos (que se muestran en la pantalla), pero al escribir otra vez el A, el programa se detiene un momento al recibir una nueva isntrucción y sigue con su funcionamiento
