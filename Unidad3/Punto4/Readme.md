@@ -1,0 +1,1 @@
+En script communicator se está transmitiendo en el orden little-endian, donde el byte menos significativo es el d5, luego el 55, el 60 y el más significativo sería el 45.  
